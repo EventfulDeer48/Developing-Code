@@ -1,0 +1,32 @@
+name: Test Plugin
+api: 3.0.0, 4.0.0
+author: Me obviously...
+main: NameGoesHere\Main
+version: 0.0.9
+commands:
+  test:
+    usage: /test
+    aliases: t
+    description: Test command.
+  hello:
+    usage: /hello <player>
+    description: Says hello to the sender or another player.
+  creative:
+    usage: /creative <player>
+    description: Sets a player or sender to Creative Mode.
+  survival:
+    usage: /survival <player>
+    description: Sets a player or sender into Survival Mode.
+permissions:
+  test.*:
+    default: op
+    children:
+      test.test:
+        default: op
+        description: With this permission players can use /test
+      test.hello:
+        default: op
+        description: With this permission players can use /hello
+      test.gamemode:
+        default: op
+        description: With this permission players can use /creative and /survival
